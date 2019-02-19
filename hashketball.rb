@@ -129,11 +129,20 @@ def num_points_scored(name)
   end
   end
 
+<<<<<<< HEAD
 def shoe_size(player)
     game_hash.each do |location, team_data|
       team_data.each do |key, val|
       if val.include?(player)
         return game_hash[location][key][player][:shoe]
+=======
+def shoe_size(players)
+  binding.pry
+    game_hash.each do |location, team_data|
+      team_data.each do |key, val|
+      if val.include?(players)
+        return game_hash[location][key][players][:shoe]
+>>>>>>> 9dd5d9cc7a00b36a02290aa96bb914d18dc65710
       end
     end
   end
@@ -169,16 +178,26 @@ end
 num
 end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dd5d9cc7a00b36a02290aa96bb914d18dc65710
 def player_stats(player)
   game_hash.each do |location, team_data|
   team_data[:players].each do |name, stats|
     if name == player
        return stats 
+<<<<<<< HEAD
     end
   end
   end
 end
+=======
+       end
+     end
+   end
+ end
+>>>>>>> 9dd5d9cc7a00b36a02290aa96bb914d18dc65710
 
 
 def big_shoe_rebounds
@@ -191,4 +210,19 @@ def big_shoe_rebounds
 end
 end
 end
+<<<<<<< HEAD
 end
+=======
+end
+
+def players_by_number(number)
+  binding.pry
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |name, stats|
+      if stats[:number] == number 
+        return name
+  end
+end
+end
+end
+>>>>>>> 9dd5d9cc7a00b36a02290aa96bb914d18dc65710
